@@ -9,6 +9,14 @@
 body {
   font-family: Arial, sans-serif;
   background: linear-gradient(135deg, #3f87a6, #ebf8e1, #f69d3c);
+
+  /* 👇 Campo preparado para imagem de fundo */
+  /* Se quiser usar, basta descomentar as linhas abaixo */
+  /* background-image: url("img/fundo.jpg"); */
+  /* background-size: cover; */
+  /* background-position: center; */
+  /* background-repeat: no-repeat; */
+
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -16,10 +24,11 @@ body {
   padding: 20px; /* evita que o conteúdo encoste nas bordas em telas pequenas */
 }
 
+
 /* Container principal */
 .container {
   background: white;
-  padding: 30px;
+  padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   text-align: center;
@@ -29,42 +38,53 @@ body {
 
 /* Título */
 h1 {
-  margin-bottom: 20px;
+  margin-bottom: 1.2rem;
   color: #333;
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 
 /* Campos e labels */
 .form-group {
-  margin: 15px 0;
+  margin: 1rem 0;
   text-align: left;
 }
 
 label {
   display: block;
   font-weight: bold;
-  margin-bottom: 5px;
+  margin-bottom: 0.3rem;
   color: #444;
 }
 
 select, input {
   width: 100%;
-  padding: 8px;
-  font-size: 16px;
+  padding: 0.6rem;
+  font-size: 1rem;
   border-radius: 6px;
   border: 1px solid #ccc;
 }
 
-/* Botão principal */
+/* Botões em linha */
+.acoes {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+.acoes button {
+  flex: 1;
+}
+
+/* Botões padrão */
 button {
-  margin-top: 15px;
-  padding: 10px 20px;
+  padding: 0.6rem 1.2rem;
   background: #3f87a6;
   color: white;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 1rem;
   transition: 0.3s;
 }
 
@@ -72,23 +92,33 @@ button:hover {
   background: #326c86;
 }
 
+/* Botão limpar histórico */
+#btnLimpar {
+  background: #d9534f;
+}
+
+#btnLimpar:hover {
+  background: #c9302c;
+}
+
 /* Resultado */
 #resultado {
-  margin-top: 20px;
-  font-size: 18px;
+  margin-top: 1.2rem;
+  font-size: 1.1rem;
   font-weight: bold;
   color: #222;
 }
 
 /* Histórico */
 h2 {
-  margin-top: 20px;
+  margin-top: 1.2rem;
   color: #333;
+  font-size: 1.2rem;
 }
 
 #historico {
   list-style: none;
-  margin-top: 10px;
+  margin-top: 0.6rem;
   padding: 0;
   text-align: left;
   max-height: 150px;
@@ -97,34 +127,15 @@ h2 {
 
 #historico li {
   background: #f4f4f4;
-  margin: 5px 0;
-  padding: 8px;
+  margin: 0.3rem 0;
+  padding: 0.6rem;
   border-radius: 6px;
-  font-size: 14px;
-}
-
-/* Botão limpar histórico */
-#btnLimpar {
-  margin-top: 10px;
-  padding: 8px 16px;
-  background: #d9534f;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 14px;
-  transition: 0.3s;
-}
-
-#btnLimpar:hover {
-  background: #c9302c;
+  font-size: 0.9rem;
 }
 
 /* Media queries para telas pequenas */
 @media (max-width: 400px) {
-  h1 { font-size: 20px; }
-  button, #btnLimpar { font-size: 14px; padding: 8px 16px; }
-  #resultado { font-size: 16px; }
-  .form-group { margin: 10px 0; }
-  .container { padding: 20px; }
+  h1 { font-size: 1.2rem; }
+  #resultado { font-size: 1rem; }
+  .container { padding: 1.5rem; }
 }
