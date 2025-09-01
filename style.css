@@ -8,38 +8,37 @@
 /* Fundo e centralização */
 body {
   font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #3f87a6, #ebf8e1, #f69d3c);
-
-  /* 👇 Campo preparado para imagem de fundo */
-  /* Se quiser usar, basta descomentar as linhas abaixo */
-  /* background-image: url("img/fundo.jpg"); */
-  /* background-size: cover; */
-  /* background-position: center; */
-  /* background-repeat: no-repeat; */
+  background-image: url('shorekeeper.jpg'); /* como está no mesmo diretório do index */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px; /* evita que o conteúdo encoste nas bordas em telas pequenas */
+  padding: 20px;
 }
 
-
-/* Container principal */
+/* Container principal com efeito vidro */
 .container {
-  background: white;
+  background: rgba(65, 64, 64, 0.4); /* transparente */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* compatibilidade Safari */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* borda sutil para efeito vidro */
   padding: 2rem;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   text-align: center;
   width: 90%;
-  max-width: 400px; /* limita o tamanho em telas grandes */
+  max-width: 400px;
 }
 
 /* Título */
 h1 {
   margin-bottom: 1.2rem;
-  color: #333;
+  color: #fff; /* mudou para branco para melhor contraste */
   font-size: 1.5rem;
 }
 
@@ -53,7 +52,7 @@ label {
   display: block;
   font-weight: bold;
   margin-bottom: 0.3rem;
-  color: #444;
+  color: #eee; /* mais visível sobre o fundo translúcido */
 }
 
 select, input {
@@ -106,13 +105,13 @@ button:hover {
   margin-top: 1.2rem;
   font-size: 1.1rem;
   font-weight: bold;
-  color: #222;
+  color: #fff; /* branco para contraste */
 }
 
 /* Histórico */
 h2 {
   margin-top: 1.2rem;
-  color: #333;
+  color: #fff;
   font-size: 1.2rem;
 }
 
@@ -126,11 +125,12 @@ h2 {
 }
 
 #historico li {
-  background: #f4f4f4;
+  background: rgba(255, 255, 255, 0.2); /* transparente para efeito vidro nos itens */
   margin: 0.3rem 0;
   padding: 0.6rem;
   border-radius: 6px;
   font-size: 0.9rem;
+  color: #fff;
 }
 
 /* Media queries para telas pequenas */
@@ -138,4 +138,20 @@ h2 {
   h1 { font-size: 1.2rem; }
   #resultado { font-size: 1rem; }
   .container { padding: 1.5rem; }
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: #eee;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 14px;
+  z-index: 100;
+}
+footer a {
+  color: #838080;
+  text-decoration: none;
 }
