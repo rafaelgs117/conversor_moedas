@@ -9,10 +9,11 @@
 body {
   font-family: Arial, sans-serif;
   background: linear-gradient(135deg, #3f87a6, #ebf8e1, #f69d3c);
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 20px; /* evita que o conteúdo encoste nas bordas em telas pequenas */
 }
 
 /* Container principal */
@@ -22,13 +23,15 @@ body {
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   text-align: center;
-  width: 350px;
+  width: 90%;
+  max-width: 400px; /* limita o tamanho em telas grandes */
 }
 
 /* Título */
 h1 {
   margin-bottom: 20px;
   color: #333;
+  font-size: 24px;
 }
 
 /* Campos e labels */
@@ -52,7 +55,7 @@ select, input {
   border: 1px solid #ccc;
 }
 
-/* Botão */
+/* Botão principal */
 button {
   margin-top: 15px;
   padding: 10px 20px;
@@ -100,6 +103,7 @@ h2 {
   font-size: 14px;
 }
 
+/* Botão limpar histórico */
 #btnLimpar {
   margin-top: 10px;
   padding: 8px 16px;
@@ -114,4 +118,13 @@ h2 {
 
 #btnLimpar:hover {
   background: #c9302c;
+}
+
+/* Media queries para telas pequenas */
+@media (max-width: 400px) {
+  h1 { font-size: 20px; }
+  button, #btnLimpar { font-size: 14px; padding: 8px 16px; }
+  #resultado { font-size: 16px; }
+  .form-group { margin: 10px 0; }
+  .container { padding: 20px; }
 }
