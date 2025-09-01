@@ -1,0 +1,117 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fundo e centralização */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #3f87a6, #ebf8e1, #f69d3c);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container principal */
+.container {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  text-align: center;
+  width: 350px;
+}
+
+/* Título */
+h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Campos e labels */
+.form-group {
+  margin: 15px 0;
+  text-align: left;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #444;
+}
+
+select, input {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* Botão */
+button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #3f87a6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #326c86;
+}
+
+/* Resultado */
+#resultado {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #222;
+}
+
+/* Histórico */
+h2 {
+  margin-top: 20px;
+  color: #333;
+}
+
+#historico {
+  list-style: none;
+  margin-top: 10px;
+  padding: 0;
+  text-align: left;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+#historico li {
+  background: #f4f4f4;
+  margin: 5px 0;
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+#btnLimpar {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background: #d9534f;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+#btnLimpar:hover {
+  background: #c9302c;
+}
