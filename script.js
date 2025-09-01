@@ -1,6 +1,7 @@
 // Lista para armazenar histórico
 let historico = [];
 
+
 // Carrega moedas suportadas ao iniciar a página
 document.addEventListener("DOMContentLoaded", async () => {
   const url = "https://api.frankfurter.app/currencies";
